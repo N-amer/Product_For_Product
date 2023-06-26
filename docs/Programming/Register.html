@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Register Page</title>
+</head>
+
+<body>
+    <div class="bg-green-500 w-screen h-screen font-bold">
+        <img src="img/PFP_logo.png" alt="" class="absolute right-0 mr-[4rem] mt-10">
+        <img src="img/Recyclingen.jfif" alt="" class="h-screen w-[90rem]">
+        <div class="flex justify-center">
+            <form action="Register.html" method="POST" class="">
+                <input type="text" placeholder="Username"
+                    class="mt-12 py-4 px-5 rounded-full border-2 border-black  absolute top-0 right-0 mr-[7rem] mt-[15rem]">
+                <input type="password " placeholder="Password" name="password" id="passwordText"
+                    class="mt-12 py-4 px-5 rounded-full border-2 border-black  absolute top-0 right-0 mr-[7rem] mt-[21rem]">
+                <input type="password" placeholder="Confirm Password" name="password2" id="passwordTextConfirm"
+                    class="mt-12 py-4 px-5 rounded-full border-2 border-black  absolute top-0 right-0 mr-[7rem] mt-[27rem]">
+                <input type="submit" name="Register!"
+                    class="bg-green-800 mt-12 py-4 px-5 rounded-full border-2 border-black  absolute top-0 right-0 mr-[11rem] mt-[36rem] hover:bg-green-200 ">
+                <div class="absolute right-0 bottom-0 mr-[11rem] mb-[25rem]">
+                    <input type="checkbox" id="see" name="see" class="ml-[7rem" onclick="seeing()">
+                    see password
+                </div>
+            </form>
+            <div class="absolute bottom-0 flex flex-nowrap right-0 mr-[7rem] mb-4">
+                <p class="pr-3">Already have a account?</p> <a href="#" class="text-blue-700">Click
+                    Here!</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function seeing() {
+            var x = document.getElementById("passwordText");
+            var y = document.getElementById("passwordTextConfirm");
+            if (x.type === "password" && y.type === "password") {
+                x.type = "text";
+                y.type = "text"
+            } else {
+                x.type = "password";
+                y.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>
